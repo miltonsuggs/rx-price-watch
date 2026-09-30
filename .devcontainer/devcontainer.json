@@ -1,23 +1,26 @@
 {
   "name": "rx-price-watch",
-  "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
-  "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-    "ghcr.io/devcontainers/features/terraform:1": {},
-    "ghcr.io/devcontainers/features/aws-cli:1": {},
-    "ghcr.io/devcontainers/features/github-cli:1": {}
-  },
-  "forwardPorts": [8501, 8080],
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "forwardPorts": [
+    8501,
+    8080
+  ],
   "portsAttributes": {
-    "8501": { "label": "Streamlit dashboard" },
-    "8080": { "label": "Airflow UI / dbt docs" }
+    "8080": {
+      "label": "Airflow UI / dbt docs"
+    },
+    "8501": {
+      "label": "Streamlit dashboard"
+    }
   },
   "postCreateCommand": "bash .devcontainer/post-create.sh",
   "customizations": {
     "codespaces": {
       "repositories": {
         "miltonsuggs/rx-price-watch-reference": {
-          "permissions": { "contents": "read" }
+          "permissions": {
+            "contents": "read"
+          }
         }
       }
     },
