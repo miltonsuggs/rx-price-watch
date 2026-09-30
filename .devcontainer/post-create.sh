@@ -1,4 +1,3 @@
-```bash
 #!/usr/bin/env bash
 # Runs once when the Codespace is created (and again after a rebuild).
 set -uo pipefail
@@ -31,4 +30,4 @@ loadenv() { set -a; source "$RX_PROJECT_ROOT/.env"; set +a; echo "loaded .env in
 BASHRC
 fi
 echo "==> Done. Open a NEW terminal (Ctrl+Shift+\`) so the helpers load."
-```
+
