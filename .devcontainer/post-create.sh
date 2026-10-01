@@ -9,6 +9,12 @@ if ! command -v unzip >/dev/null 2>&1; then
   sudo apt-get update -qq && sudo apt-get install -y -qq unzip
 fi
 
+echo "==> Installing uv (Python project + dependency manager)"
+if ! command -v uv >/dev/null 2>&1 && [ ! -x "$HOME/.local/bin/uv" ]; then
+  curl -LsSf https://astral.sh/uv/install.sh | sh \
+    || echo "!! uv install failed - re-run: bash .devcontainer/post-create.sh"
+fi
+
 echo "==> Installing Terraform"
 if ! command -v terraform >/dev/null 2>&1; then
   TF_VERSION=$(curl -fsSL https://checkpoint-api.hashicorp.com/v1/check/terraform 2>/dev/null \
