@@ -1,0 +1,17 @@
+[project]
+name = "rx-price-watch"
+description = "End-to-end drug-pricing adata platform: CMS NADAC, Medicare Part D and openFDA NDC data on AWS + Snowflake +dbt+ Airflow."
+readme = "README.md"
+version = "0.1.0"
+authors = [
+    { name = "Milton Suggs", email = "58455460+miltonsuggs@users.noreply.github.com" }
+]
+requires-python = ">=3.11"
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+description = "End-to-end drug-pricing adata platform: CMS NADAC, Medicare Part D and openFDA NDC data on AWS + Snowflake +dbt+ Airflow."
+readme = "README.md"
